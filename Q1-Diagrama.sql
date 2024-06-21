@@ -1,8 +1,9 @@
+
 CREATE TABLE Pessoa (
-    CPF NUMERIC(18,0) PRIMARY KEY,
+    CPF BIGINT PRIMARY KEY,
     nome NVARCHAR(255),
     dataNascimento DATE,
-	telefone INT,
+	telefone BIGINT,
 	nacionalidade NVARCHAR(100),
 	sexo NVARCHAR(100)
 );
@@ -11,15 +12,14 @@ CREATE TABLE Pessoa (
 CREATE TABLE Profissional (
     ID INT PRIMARY KEY,
     cargo NVARCHAR(100),
-    cpf NVARCHAR(14),
-    PessoaCPF INT, -- Chave estrangeira para Imunização
+    PessoaCPF BIGINT, -- Chave estrangeira para Imunização
     FOREIGN KEY (PessoaCPF) REFERENCES Pessoa(CPF)
 );
 
 -- Tabela Paciente
 CREATE TABLE Paciente (
     ID INT PRIMARY KEY,
-	PessoaCPF INT,
+	PessoaCPF BIGINT,
 	FOREIGN KEY (PessoaCPF) REFERENCES Pessoa(CPF)  
 );
 
@@ -64,4 +64,3 @@ CREATE TABLE Imunizaçao(
 	FOREIGN KEY (PostoID) REFERENCES Posto(ID),
 	FOREIGN KEY (VacinaID) REFERENCES Vacina(ID),
 	FOREIGN KEY (PacienteID) REFERENCES Paciente(ID)
-); 
