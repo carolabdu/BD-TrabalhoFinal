@@ -1,5 +1,5 @@
 CREATE TABLE Pessoa (
-    CPF INT PRIMARY KEY,
+    CPF NUMERIC(18,0) PRIMARY KEY,
     nome NVARCHAR(255),
     dataNascimento DATE,
 	telefone INT,
