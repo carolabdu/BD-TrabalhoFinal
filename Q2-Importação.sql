@@ -1,7 +1,5 @@
 INSERT INTO Pessoa (CPF, nome, dataNascimento, telefone, nacionalidade, sexo)
 VALUES
-    INSERT INTO Pessoa (CPF, nome, dataNascimento, telefone, nacionalidade, sexo)
-VALUES
     (12345678901, 'Maria Silva', '1980-05-15', 95551234567, 'Brasileira', 'Feminino'),
     (98765432102, 'João Santos', '1995-10-20', 95559876543, 'Portuguesa', 'Masculino'),
     (11122233304, 'Ana Oliveira', '1992-03-10', 95551234568, 'Brasileira', 'Feminino'),
@@ -19,7 +17,7 @@ VALUES
     (1, 'Médico',  12345678901),
     (2, 'Enfermeiro', 98765432102),
 	(3, 'Médico' , 11122233304),
-	(4, 'Médico' 44455566605),
+	(4, 'Médico', 44455566605),
 	(5, 'Enfermeiro', 77788899906);
 
 
